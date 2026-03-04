@@ -14,6 +14,11 @@ app.use(express.json());
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Explicit route for the homepage (often needed for Hostinger container health checks on /)
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Basic API route placeholder for future AI chatbot integration
 app.post('/api/chat', async (req, res) => {
   try {
