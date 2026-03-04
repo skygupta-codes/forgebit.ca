@@ -14,12 +14,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/api/chat', async (req, res) => {
   try {
     const { message } = req.body;
-    
+
     // TODO: Integrate actual AI API (OpenAI/Anthropic) here
     // For now, return a placeholder response
-    res.json({ 
-      success: true, 
-      reply: "This is a placeholder response from the Forgebit backend. The AI integration will be connected here." 
+    res.json({
+      success: true,
+      reply: "This is a placeholder response from the Forgebit backend. The AI integration will be connected here."
     });
   } catch (error) {
     console.error('Chat API Error:', error);
