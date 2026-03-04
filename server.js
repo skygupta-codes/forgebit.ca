@@ -1,8 +1,12 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Enable CORS for all routes (important for Hostinger App Hosting if frontend and backend domain differ slightly)
+app.use(cors());
 
 // Middleware to parse JSON (useful for future API endpoints)
 app.use(express.json());
