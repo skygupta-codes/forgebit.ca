@@ -112,17 +112,16 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 16px 32px;
+      padding: 14px 28px;
       border-radius: 100px;
       /* Apple pill-shape */
-      font-size: 1.0625rem;
-      /* ~17px Apple size */
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 500;
       cursor: pointer;
       border: 1px solid transparent;
       transition: all var(--transition);
       text-decoration: none;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
     }
 
     .btn-primary {
@@ -136,14 +135,13 @@
     }
 
     .btn-secondary {
-      background: transparent;
-      color: var(--color-accent);
-      border-color: var(--color-border);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--color-text);
+      backdrop-filter: blur(10px);
     }
 
     .btn-secondary:hover {
-      background: var(--color-surface);
-      border-color: var(--color-accent);
+      background: rgba(255, 255, 255, 0.08);
       transform: scale(1.02);
     }
 
@@ -189,7 +187,7 @@
 
     .nav-logo {
       font-size: 1.25rem;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: -0.02em;
       color: var(--color-text);
       display: flex;
@@ -198,7 +196,8 @@
     }
 
     .nav-logo .accent {
-      color: var(--color-accent);
+      font-weight: 400;
+      opacity: 0.8;
     }
 
     .nav-links {
@@ -220,16 +219,18 @@
     }
 
     .nav-cta {
-      background: var(--color-accent);
-      color: #fff !important;
+      background: var(--color-text);
+      color: var(--color-bg) !important;
       padding: 10px 20px;
       border-radius: 100px;
-      font-weight: 600 !important;
+      font-weight: 500 !important;
+      font-size: 0.875rem;
+      transition: all var(--transition);
     }
 
     .nav-cta:hover {
-      background: var(--color-accent-2);
-      transform: scale(1.05);
+      background: #e5e5e5;
+      transform: scale(1.02);
     }
 
     /* Mobile hamburger */
@@ -272,7 +273,7 @@
       justify-content: center;
       overflow: hidden;
       padding: 120px 24px 80px;
-      background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+      background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     }
 
     /* Grid overlay */
@@ -281,9 +282,9 @@
       position: absolute;
       inset: 0;
       background-image:
-        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
-      background-size: 40px 40px;
-      opacity: 0.5;
+        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.02) 1px, transparent 0);
+      background-size: 64px 64px;
+      opacity: 0.8;
     }
 
     .hero-content {
@@ -325,7 +326,8 @@
     }
 
     .hero h1 .accent {
-      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+      /* Subtle silver/white glow gradient indicative of Retell/Apple */
+      background: linear-gradient(135deg, #ffffff 0%, #a1a1a6 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
